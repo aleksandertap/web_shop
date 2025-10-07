@@ -18,14 +18,6 @@ app.use((req,res,next) =>{
   .catch(err=> console.log(err))
 })
 
-const productAdminRoutes = require('./routes/admin/product')
-app.use('/admin', productAdminRoutes)
-
-const productRoutes = require('./routes/product')
-app.use(productRoutes)
-
-const shopRoutes = require('./routes/shop')
-app.use(shopRoutes)
 
 
 
@@ -61,3 +53,14 @@ app.get("/", (req, res) => {
 });
 
 
+const productAdminRoutes = require('./routes/admin/product')
+app.use('/admin', productAdminRoutes)
+
+const productRoutes = require('./routes/product')
+app.use(productRoutes)
+
+const shopRoutes = require('./routes/shop')
+app.use(shopRoutes)
+
+const orderRoutes = require('./routes/order')
+app.use(orderRoutes)
